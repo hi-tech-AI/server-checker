@@ -1,9 +1,13 @@
 import requests
 import threading
+import os
 from time import sleep
+from dotenv import load_dotenv
 
-telegram_token = '6623261193:AAHDyIMqw8xtWo1y_zxa4Br_yjuWJXlzJwo'
-telegram_chat_id = '6360011882'
+load_dotenv()
+
+telegram_token = os.getenv("TELEGRM_TOKEN")
+telegram_chat_id = os.getenv("CHAT_ID")
 
 # Server's address
 server_address = 'https://app.slack.com/client/T032XS1SL0M/D06S9D3B3PU'
